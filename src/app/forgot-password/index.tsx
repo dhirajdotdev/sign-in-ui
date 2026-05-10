@@ -56,7 +56,7 @@ export default function ForgotPassword() {
                 <FontAwesome
                   name={method.icon}
                   size={20}
-                  color={isSelected ? "rgb(60, 200, 60)" : "#555"}
+                  color={isSelected ? "rgba(137, 204, 19)" : "#555"}
                 />
               </View>
               <View style={styles.methodTextBox}>
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     borderColor: "transparent",
   },
   methodCardSelected: {
-    borderColor: "rgb(60, 200, 60)",
+    borderColor: "rgba(137, 204, 19)",
   },
   methodIconBox: {
     width: 48,
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
   authButton: {
     marginTop: 30,
     padding: 16,
-    backgroundColor: "rgb(60, 200, 60)",
+    backgroundColor: "rgba(137, 204, 19)",
     borderRadius: 11,
     alignItems: "center",
     justifyContent: "center",

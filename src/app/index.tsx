@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
   authButton: {
     marginTop: 15,
     padding: 16,
-    backgroundColor: "rgb(60, 200, 60)",
+    backgroundColor: "rgba(137, 204, 19)",
     borderRadius: 11,
     alignItems: "center",
     justifyContent: "center",
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   footerLinks: {
-    color: "rgb(38, 126, 38)",
+    color: "rgba(137, 204, 19)",
     textDecorationLine: "underline",
   },
 });
