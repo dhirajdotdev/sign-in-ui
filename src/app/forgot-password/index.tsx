@@ -76,7 +76,7 @@ export default function ForgotPassword() {
       </Pressable>
 
       <View style={styles.lockWatermark}>
-        <FontAwesome name="lock" size={120} color="#e0e0e0" />
+        <FontAwesome name="lock" size={240} color="#e0e0e0" />
       </View>
     </SafeAreaView>
   );
@@ -149,8 +149,9 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   lockWatermark: {
-    alignItems: "center",
-    marginTop: 40,
+    alignItems: "flex-start",
+    marginTop: 80,
+    
     opacity: 0.5,
   },
 });
