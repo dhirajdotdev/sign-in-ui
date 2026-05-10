@@ -1,4 +1,3 @@
-import SocialBox from "@/components/SocialBox";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Link } from "expo-router";
 import { useState } from "react";
@@ -15,6 +14,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Index() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmpassword, setConfirmPassword] = useState("");
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.headerContainer}>
@@ -22,9 +22,9 @@ export default function Index() {
           source={require("@/assets/images/logo.png")}
           style={{ height: 80, width: 80 }}
         />
-        <Text style={styles.headerTitle}>Sign In</Text>
+        <Text style={styles.headerTitle}>Sign Up For Free</Text>
         <Text style={styles.headerSubText}>
-          Let's experience the joy of telecare AI
+          {"Let's"} Sign up in 1 minute for free!
         </Text>
       </View>
 
@@ -58,28 +58,34 @@ export default function Index() {
             secureTextEntry={true}
           />
         </View>
+        <Text style={styles.formLabel}>Confirm Password</Text>
+        <View style={{ flexDirection: "row", width: "100%" }}>
+          <FontAwesome
+            name="lock"
+            style={{ position: "absolute", top: 27, left: 10 }}
+            size={18}
+          />
+          <TextInput
+            style={styles.formInput}
+            placeholder="Confirm your password..."
+            value={confirmpassword}
+            onChangeText={setConfirmPassword}
+            secureTextEntry={true}
+          />
+        </View>
         <Pressable onPress={() => {}} style={styles.authButton}>
-          <Text style={{ color: "#fff", fontWeight: "bold" }}>Sign In</Text>
+          <Text style={{ color: "#fff", fontWeight: "bold" }}>Sign Up</Text>
           <FontAwesome name="arrow-right" color={"#fff"} />
         </Pressable>
       </View>
 
-      <View style={styles.socialMediaBox}>
-        <SocialBox name="facebook" />
-        <SocialBox name="google" />
-        <SocialBox name="instagram" />
-      </View>
-
       <View style={styles.footerContainer}>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 2 }}>
-          <Text>{"Don't"} have an account? </Text>
-          <Link style={styles.footerLinks} href={"/signup"}>
-            Sign Up
+          <Text>{"Already"} have an account? </Text>
+          <Link style={styles.footerLinks} href={"/"}>
+            Sign In
           </Link>
         </View>
-        <Link style={styles.footerLinks} href={"/forgot-password"}>
-          Forgot your password
-        </Link>
       </View>
     </SafeAreaView>
   );
@@ -130,7 +136,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 10,
   },
-
   socialMediaBox: {
     marginTop: 20,
     flexDirection: "row",
